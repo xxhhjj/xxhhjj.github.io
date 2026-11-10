@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <script>try{var t=localStorage.getItem("theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>环球指数地图 | 慧眼投</title>
+  <meta name="description" content="在透明世界地图上实时叠加全球主要股市指数，数据每 4 小时由 GitHub Actions 自动更新。" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/map.css" />
+</head>
+<body>
+<header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#top" aria-label="慧眼投首页">
+        <svg class="brand__logo" viewBox="0 0 48 48" width="34" height="34" aria-hidden="true">
+          <defs>
+            <linearGradient id="eyeGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#22d3ee" />
+              <stop offset="1" stop-color="#a855f7" />
+            </linearGradient>
+          </defs>
+          <path d="M4 24C10 14 38 14 44 24C38 34 10 34 4 24Z" fill="none" stroke="url(#eyeGrad)" stroke-width="3"/>
+          <circle cx="24" cy="24" r="8" fill="url(#eyeGrad)" />
+          <circle cx="24" cy="24" r="3" fill="#0b0f1a" />
+          <circle cx="27" cy="21" r="1.6" fill="#fff" opacity="0.9"/>
+        </svg>
+        <span class="brand__name">慧眼投</span>
+      </a>
+
+      <nav class="nav__links" aria-label="主导航">
+        <a href="#services">服务</a>
+        <a href="/global/">全球指数</a>
+        <a href="/broker/">港美股</a>
+        <a href="/bank/">银行</a>
+        <a href="/crypto/">加密</a>
+        <a href="#insights">资讯</a>
+      </nav>
+
+      <button class="nav__theme" id="themeToggle" type="button" aria-label="切换深色 / 白色背景" title="切换深色 / 白色背景">☀️</button>
+
+      <div class="nav__social">
+        <a href="https://t.me/" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M21.9 4.3 18.6 19c-.3 1.3-.9 1.6-1.9 1-.6-.4-1-.7-1.6-1.3l-2.2-1.6c-.5-.3-1-.7-1.7-.3l2.8 2.6c.6.5 1 .9 1.8.9 1.6 0 2.3-1.4 2.5-2.4l3.2-12.2c.3-1.2-.2-1.8-1.5-1.3zM9 14.5l8.4-7.9c.4-.4.8-.2.5.2L11 16.6l-.2 2.3c.3 0 .6-.1.8-.3l2-1.9 4.2 3.1c.8.4 1.3.2 1.5-.7L9 14.5z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M23 12s0-3.3-.4-4.9c-.2-.8-.8-1.5-1.7-1.7C19.3 5 12 5 12 5s-7.3 0-8.9.4c-.9.2-1.5.9-1.7 1.7C1 8.7 1 12 1 12s0 3.3.4 4.9c.2.8.8 1.5 1.7 1.7C4.7 19 12 19 12 19s7.3 0 8.9-.4c.9-.2 1.5-.9 1.7-1.7.4-1.6.4-4.9.4-4.9zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg>
+        </a>
+        <a href="https://x.com/home" target="_blank" rel="noopener" aria-label="X" title="X">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M18.2 2H21l-6.5 7.4L22 22h-6.8l-4.5-6-5.2 6H2l7-8L2 2h7l4.1 5.5L18.2 2zm-1.2 18h1.9L7.1 4H5.1l11.9 16z"/></svg>
+        </a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="菜单">☰</button>
+    </div>
+  </header>
+<main class="gim-page">
+  <div class="gim-page__inner">
+    <a class="article__back" href="/">← 返回首页</a>
+    <div class="gim">
+      <div class="topbar">
+        <div class="brand">
+          <span class="logo">🌐</span>
+          <div class="titles">
+            <h1>环球指数地图</h1>
+            <p class="subtitle">全球股市指数 · 实时叠加于透明世界地图</p>
+          </div>
+        </div>
+        <div class="status">
+          <div class="legend">
+            <span id="legendUp" class="dot"></span>涨
+            <span id="legendDown" class="dot"></span>跌
+          </div>
+          <div class="meta">
+            <span id="updated" class="updated">数据加载中…</span>
+            <span id="conn" class="conn pending">●</span>
+          </div>
+          <div class="controls">
+            <label>大洲
+              <select id="region">
+                <option value="all" selected>全部</option>
+                <option value="as">亚洲</option>
+                <option value="eu">欧洲</option>
+                <option value="na">北美洲</option>
+                <option value="sa">南美洲</option>
+                <option value="af">非洲</option>
+                <option value="oc">大洋洲</option>
+                <option value="an">南极洲</option>
+              </select>
+            </label>
+            <label>背景
+              <select id="theme">
+                <option value="midnight" selected>深邃星空</option>
+                <option value="ocean">海洋蓝</option>
+                <option value="noir">纯黑</option>
+                <option value="light">极简浅色</option>
+              </select>
+            </label>
+            <button id="colorMode" title="切换涨跌配色">涨跌配色：红涨绿跌</button>
+            <label>刷新
+              <select id="interval">
+                <option value="10000">10s</option>
+                <option value="20000" selected>20s</option>
+                <option value="30000">30s</option>
+                <option value="60000">60s</option>
+              </select>
+            </label>
+            <label class="chk"><input type="checkbox" id="showLabels" checked /> 显示数值</label>
+            <button id="resetView" title="重置地图视图">重置视图</button>
+            <button id="refreshBtn">立即刷新</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="layout">
+        <section id="map" class="map"></section>
+        <aside class="panel">
+          <div class="panel-head">
+            <h2>全球榜单</h2>
+            <div class="head-actions">
+              <button id="toggleAll" class="mini">折叠全部</button>
+              <div class="sort">
+                <button data-sort="pct" class="active">按涨跌幅</button>
+                <button data-sort="region">按大洲</button>
+              </div>
+            </div>
+          </div>
+          <div id="list" class="list"></div>
+          <div class="panel-foot">
+            数据源：新浪财经（GitHub Actions 定时抓取 → data/quotes.json）· 涨跌配色：红涨绿跌
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="brand">
+          <svg class="brand__logo" viewBox="0 0 48 48" width="30" height="30" aria-hidden="true">
+            <path d="M4 24C10 14 38 14 44 24C38 34 10 34 4 24Z" fill="none" stroke="url(#eyeGrad)" stroke-width="3"/>
+            <circle cx="24" cy="24" r="8" fill="url(#eyeGrad)" />
+            <circle cx="24" cy="24" r="3" fill="#0b0f1a" />
+          </svg>
+          <span class="brand__name">慧眼投</span>
+        </div>
+        <p class="footer__tag">打开慧眼，投资全球。</p>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <h4>服务</h4>
+          <a href="#broker">港美股开户</a>
+          <a href="/bank/">境外银行卡</a>
+          <a href="/crypto/">加密货币</a>
+          <a href="#cfd">CFD 差价合约</a>
+        </div>
+        <div>
+          <h4>内容</h4>
+          <a href="#insights">慧眼资讯</a>
+          <a href="#xquant">XQuant 量化</a>
+          <a href="/global/">全球指数</a>
+        </div>
+        <div>
+          <h4>关注我们</h4>
+          <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://x.com/home" target="_blank" rel="noopener">X / Twitter</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 慧眼投 · 由 GitHub Pages 托管，指数行情每 4 小时自动更新</span>
+      <span class="disclaimer">投资有风险，入市需谨慎。本站内容不构成投资建议。</span>
+    </div>
+  </footer>
+<script src="/assets/lib/echarts.min.js"></script>
+<script src="/assets/data/world.js"></script>
+<script src="/assets/data/indices.js"></script>
+<script src="/assets/js/map-app.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <script>try{var t=localStorage.getItem('theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>慧眼投 | 打开慧眼，投资全球</title>
+  <meta name="description" content="慧眼投 —— 提供全市场投资路径：港美股开户、境外银行卡、加密货币交易、CFD 投资。行情数据由 GitHub Actions 定时自动更新。" />
+  <meta name="author" content="慧眼投" />
+  <meta property="og:title" content="慧眼投 | 打开慧眼，投资全球" />
+  <meta property="og:description" content="港美股开户 · 境外银行卡 · 加密货币 · CFD · 全市场投资路径" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/map.css" />
+</head>
+<body>
+  <!-- ===== 导航 ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#top" aria-label="慧眼投首页">
+        <svg class="brand__logo" viewBox="0 0 48 48" width="34" height="34" aria-hidden="true">
+          <defs>
+            <linearGradient id="eyeGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#22d3ee" />
+              <stop offset="1" stop-color="#a855f7" />
+            </linearGradient>
+          </defs>
+          <path d="M4 24C10 14 38 14 44 24C38 34 10 34 4 24Z" fill="none" stroke="url(#eyeGrad)" stroke-width="3"/>
+          <circle cx="24" cy="24" r="8" fill="url(#eyeGrad)" />
+          <circle cx="24" cy="24" r="3" fill="#0b0f1a" />
+          <circle cx="27" cy="21" r="1.6" fill="#fff" opacity="0.9"/>
+        </svg>
+        <span class="brand__name">慧眼投</span>
+      </a>
+
+      <nav class="nav__links" aria-label="主导航">
+        <a href="#services">服务</a>
+        <a href="/global/">全球指数</a>
+        <a href="/broker/">港美股</a>
+        <a href="/bank/">银行</a>
+        <a href="/crypto/">加密</a>
+        <a href="#insights">资讯</a>
+      </nav>
+
+      <button class="nav__theme" id="themeToggle" type="button" aria-label="切换深色 / 白色背景" title="切换深色 / 白色背景">☀️</button>
+
+      <div class="nav__social">
+        <a href="https://t.me/" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M21.9 4.3 18.6 19c-.3 1.3-.9 1.6-1.9 1-.6-.4-1-.7-1.6-1.3l-2.2-1.6c-.5-.3-1-.7-1.7-.3l2.8 2.6c.6.5 1 .9 1.8.9 1.6 0 2.3-1.4 2.5-2.4l3.2-12.2c.3-1.2-.2-1.8-1.5-1.3zM9 14.5l8.4-7.9c.4-.4.8-.2.5.2L11 16.6l-.2 2.3c.3 0 .6-.1.8-.3l2-1.9 4.2 3.1c.8.4 1.3.2 1.5-.7L9 14.5z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M23 12s0-3.3-.4-4.9c-.2-.8-.8-1.5-1.7-1.7C19.3 5 12 5 12 5s-7.3 0-8.9.4c-.9.2-1.5.9-1.7 1.7C1 8.7 1 12 1 12s0 3.3.4 4.9c.2.8.8 1.5 1.7 1.7C4.7 19 12 19 12 19s7.3 0 8.9-.4c.9-.2 1.5-.9 1.7-1.7.4-1.6.4-4.9.4-4.9zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg>
+        </a>
+        <a href="https://x.com/home" target="_blank" rel="noopener" aria-label="X" title="X">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M18.2 2H21l-6.5 7.4L22 22h-6.8l-4.5-6-5.2 6H2l7-8L2 2h7l4.1 5.5L18.2 2zm-1.2 18h1.9L7.1 4H5.1l11.9 16z"/></svg>
+        </a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="菜单">☰</button>
+    </div>
+  </header>
+
+  <span id="top"></span>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <span class="eyebrow">慧眼投 2026</span>
+      <h1 class="hero__title">打开慧眼，<span class="grad-text">投资全球</span></h1>
+      <p class="hero__sub">
+        提供全市场投资路径 —— 港美股开户、境外银行卡、加密货币交易、CFD 投资，
+        一起探索财富之旅。
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#services">开始阅读</a>
+        <a class="btn btn--ghost" href="#insights">订阅更新</a>
+      </div>
+      <div class="hero__stats" id="heroStats">
+        <div class="stat"><span class="stat__num" data-count="4">4</span><span class="stat__label">大类资产路径</span></div>
+        <div class="stat"><span class="stat__num" data-count="20">20+</span><span class="stat__label">券商银行对比</span></div>
+        <div class="stat"><span class="stat__num" data-count="4">4</span><span class="stat__label">小时行情自动更新</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 服务总览 ===== -->
+  <main>
+    <section class="section" id="services">
+      <div class="section__head">
+        <span class="eyebrow">服务总览</span>
+        <h2>一条龙打通全球投资路径</h2>
+        <p>从开户到交易，从资讯到工具，覆盖你需要的每一步。</p>
+      </div>
+      <div class="cards">
+        <a class="card" href="#broker">
+          <div class="card__icon">🏦</div>
+          <h3>港美股开户</h3>
+          <p>打造全网最全、最详细的港美股开户指南，多家券商优劣对比，任君选。</p>
+          <span class="card__more">了解更多 →</span>
+        </a>
+        <a class="card" href="#bank">
+          <div class="card__icon">💳</div>
+          <h3>境外银行卡</h3>
+          <p>助您开通多家境外银行账户，跨境资金流动畅通无阻。</p>
+          <span class="card__more">了解更多 →</span>
+        </a>
+        <a class="card" href="/crypto/">
+          <div class="card__icon">₿</div>
+          <h3>加密货币</h3>
+          <p>交易所选择、资产安全存储与交易策略，把握数字资产机会。</p>
+          <span class="card__more">了解更多 →</span>
+        </a>
+        <a class="card" href="#cfd">
+          <div class="card__icon">📈</div>
+          <h3>CFD 差价合约</h3>
+          <p>以杠杆交易全球股票、指数、大宗商品，多空双向把握机会。</p>
+          <span class="card__more">了解更多 →</span>
+        </a>
+        <a class="card" href="#insights">
+          <div class="card__icon">💡</div>
+          <h3>慧眼资讯</h3>
+          <p>分享海内外投资热点、赚钱技巧，打通慧眼，一起探索财富之路。</p>
+          <span class="card__more">了解更多 →</span>
+        </a>
+        <a class="card" href="#xquant">
+          <div class="card__icon">🤖</div>
+          <h3>XQuant 量化</h3>
+          <p>人人都是量化研究员 —— 低门槛的量化研究与回测工具。</p>
+          <span class="card__more">了解更多 →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 详情区块 -->
+    <section class="detail" id="broker">
+      <div class="detail__inner">
+        <div class="detail__text">
+          <span class="eyebrow">🏦 港美股开户</span>
+          <h2>港美股开户指南【2026】</h2>
+          <p>我们整理了主流港美股券商的开户流程、费率结构、入金方式与服务体验，帮你用最短时间找到最适合的那一家。</p>
+          <p class="detail__note">💬 欢迎添加开户小助手，获得最新信息。</p>
+          <ul class="check">
+            <li>券商资质与监管对比，规避资金安全风险</li>
+            <li>佣金、平台费、汇率加点的真实成本测算</li>
+            <li>入金出金路径与境外银行卡配合方案</li>
+            <li>新手常见坑位与开户材料清单</li>
+          </ul>
+          <a class="btn btn--primary" href="/broker/">阅读完整开户指南 →</a>
+        </div>
+        <div class="detail__panel">
+          <div class="panel__row"><span>支持市场</span><b>港股 / 美股 / ETF</b></div>
+          <div class="panel__row"><span>对比维度</span><b>费率 · 速度 · 体验</b></div>
+          <div class="panel__row"><span>入金方式</span><b>境外卡 · 银证转账</b></div>
+          <div class="panel__row"><span>适合人群</span><b>新手 · 进阶 · 高频</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail detail--alt" id="bank">
+      <div class="detail__inner">
+        <div class="detail__text">
+          <span class="eyebrow">💳 境外银行卡</span>
+          <h2>跨境资金畅通无阻</h2>
+          <p>境外银行账户是投资全球的"基础设施"。我们梳理香港、新加坡、美国等地主流银行的远程开户与见证开户方案。</p>
+          <ul class="check">
+            <li>香港 / 新加坡 / 美国银行卡横向对比</li>
+            <li>远程开户与内地见证开户操作指引</li>
+            <li>日常维护成本、转账限额与合规要点</li>
+            <li>与券商入金出金的最佳搭配</li>
+          </ul>
+        </div>
+        <div class="detail__panel">
+          <div class="panel__row"><span>热门地区</span><b>香港 · 新加坡 · 美国</b></div>
+          <div class="panel__row"><span>开户方式</span><b>远程 · 见证 · 亲临</b></div>
+          <div class="panel__row"><span>核心用途</span><b>入金 · 结汇 · 消费</b></div>
+          <div class="panel__row"><span>维护要点</span><b>最低存款 · 活跃度</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail" id="crypto">
+      <div class="detail__inner">
+        <div class="detail__text">
+          <span class="eyebrow">₿ 加密货币</span>
+          <h2>数字资产的机会与防线</h2>
+          <p>从交易所选择到冷钱包存储，我们帮你建立安全、可控的加密资产参与方式，并分享实用的交易与风控思路。</p>
+          <ul class="check">
+            <li>主流交易所与去中心化钱包的安全配置</li>
+            <li>资产自托管：冷热钱包分工策略</li>
+            <li>合约杠杆的风险边界与仓位管理</li>
+            <li>链上费用、滑点与税务合规常识</li>
+          </ul>
+        </div>
+        <div class="detail__panel">
+          <div class="panel__row"><span>参与方式</span><b>现货 · 质押 · 合约</b></div>
+          <div class="panel__row"><span>安全核心</span><b>私钥自管 · 分散</b></div>
+          <div class="panel__row"><span>风控重点</span><b>杠杆 · 仓位 · 止损</b></div>
+          <div class="panel__row"><span>环球指数</span><b>见上方地图 · 自动刷新</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail detail--alt" id="cfd">
+      <div class="detail__inner">
+        <div class="detail__text">
+          <span class="eyebrow">📈 CFD 差价合约</span>
+          <h2>用杠杆交易全球资产</h2>
+          <p>差价合约让你以少量保证金撬动股票、指数、外汇与大宗商品的多空机会。我们讲清机制，更强调风险。</p>
+          <ul class="check">
+            <li>CFD 的保证金、杠杆与隔夜利息机制</li>
+            <li>可做空的特性与趋势交易场景</li>
+            <li>止损止盈与杠杆倍数的风控纪律</li>
+            <li>平台选择与监管差异避坑</li>
+          </ul>
+        </div>
+        <div class="detail__panel">
+          <div class="panel__row"><span>标的</span><b>股指 · 外汇 · 商品</b></div>
+          <div class="panel__row"><span>方向</span><b>做多 · 做空</b></div>
+          <div class="panel__row"><span>核心风险</span><b>杠杆爆仓</b></div>
+          <div class="panel__row"><span>适合</span><b>有经验交易者</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail" id="insights">
+      <div class="detail__inner">
+        <div class="detail__text">
+          <span class="eyebrow">💡 慧眼资讯</span>
+          <h2>打通慧眼，看见机会</h2>
+          <p>分享海内外投资热点与赚钱技巧，把零散信息整理成可执行的认知。我们的资讯由 GitHub Actions 定时聚合更新。</p>
+          <ul class="check">
+            <li>宏观与市场热点解读</li>
+            <li>开户、银行、税务的实操经验</li>
+            <li>量化与策略研究笔记</li>
+            <li>社群精选讨论与答疑</li>
+          </ul>
+          <a class="btn btn--primary" href="https://t.me/" target="_blank" rel="noopener">订阅频道</a>
+        </div>
+        <div class="detail__panel">
+          <div class="panel__row"><span>更新方式</span><b>GitHub 自动</b></div>
+          <div class="panel__row"><span>覆盖方向</span><b>宏观 · 开户 · 策略</b></div>
+          <div class="panel__row"><span>分发</span><b>网站 · Telegram</b></div>
+          <div class="panel__row"><span>定位</span><b>认知 · 不荐股</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail detail--alt" id="xquant">
+      <div class="detail__inner">
+        <div class="detail__text">
+          <span class="eyebrow">🤖 XQuant 量化</span>
+          <h2>人人都是量化研究员</h2>
+          <p>XQuant 把量化研究变得低门槛：从数据、回测到信号，让你用工程化方式验证投资想法，而不是拍脑袋。</p>
+          <ul class="check">
+            <li>统一的数据接入与清洗流程</li>
+            <li>可视化回测与策略表现评估</li>
+            <li>因子与信号的快速迭代</li>
+            <li>本地可运行，安全可控</li>
+          </ul>
+        </div>
+        <div class="detail__panel">
+          <div class="panel__row"><span>能力</span><b>数据 · 回测 · 信号</b></div>
+          <div class="panel__row"><span>门槛</span><b>低代码友好</b></div>
+          <div class="panel__row"><span>运行</span><b>本地 · 私有</b></div>
+          <div class="panel__row"><span>目标</span><b>想法可验证</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 优势 -->
+    <section class="section" id="why">
+      <div class="section__head">
+        <span class="eyebrow">为什么选择慧眼投</span>
+        <h2>客观、全面、持续更新</h2>
+      </div>
+      <div class="features">
+        <div class="feature"><div class="feature__icon">🌐</div><h3>全市场路径</h3><p>开户、银行、交易、资讯、工具一站式串联，不走弯路。</p></div>
+        <div class="feature"><div class="feature__icon">⚖️</div><h3>客观对比</h3><p>不站队、不荐股，只做横向对比与风险揭示。</p></div>
+        <div class="feature"><div class="feature__icon">🔄</div><h3>自动更新</h3><p>行情与资讯由 GitHub Actions 定时拉取，无需服务器。</p></div>
+        <div class="feature"><div class="feature__icon">🛡️</div><h3>合规风险</h3><p>强调资金安全与合规，提醒杠杆与跨境风险。</p></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 页脚 ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="brand">
+          <svg class="brand__logo" viewBox="0 0 48 48" width="30" height="30" aria-hidden="true">
+            <path d="M4 24C10 14 38 14 44 24C38 34 10 34 4 24Z" fill="none" stroke="url(#eyeGrad)" stroke-width="3"/>
+            <circle cx="24" cy="24" r="8" fill="url(#eyeGrad)" />
+            <circle cx="24" cy="24" r="3" fill="#0b0f1a" />
+          </svg>
+          <span class="brand__name">慧眼投</span>
+        </div>
+        <p class="footer__tag">打开慧眼，投资全球。</p>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <h4>服务</h4>
+          <a href="#broker">港美股开户</a>
+          <a href="/bank/">境外银行卡</a>
+          <a href="/crypto/">加密货币</a>
+          <a href="#cfd">CFD 差价合约</a>
+        </div>
+        <div>
+          <h4>内容</h4>
+          <a href="#insights">慧眼资讯</a>
+          <a href="#xquant">XQuant 量化</a>
+          <a href="/global/">全球指数</a>
+        </div>
+        <div>
+          <h4>关注我们</h4>
+          <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://x.com/home" target="_blank" rel="noopener">X / Twitter</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 慧眼投 · 由 GitHub Pages 托管，指数行情每 4 小时自动更新</span>
+      <span class="disclaimer">投资有风险，入市需谨慎。本站内容不构成投资建议。</span>
+    </div>
+  </footer>
+
+  <script src="assets/lib/echarts.min.js"></script>
+  <script src="assets/data/world.js"></script>
+  <script src="assets/data/indices.js"></script>
+  <script src="assets/js/map-app.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

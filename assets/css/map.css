@@ -1,0 +1,107 @@
+/* 环球指数地图 · 内嵌样式（作用域 .gim，不影响整站） */
+
+/* 独立页面外壳（/global/），仅给地图一个宽度与顶部留白 */
+.gim-page{padding:84px 24px 56px;min-height:60vh}
+.gim-page__inner{max-width:1240px;margin:0 auto}
+
+.gim {
+  --panel: rgba(15, 23, 42, 0.72);
+  --border: rgba(120, 170, 220, 0.18);
+  --text: #e6edf7;
+  --muted: #8aa0bd;
+  --up: #ff4d4f;
+  --down: #1fd17b;
+  --accent: #4ea8ff;
+  --ctrl-bg: rgba(78, 168, 255, 0.12);
+  --ctrl-bg-hover: rgba(78, 168, 255, 0.25);
+  display: flex; flex-direction: column;
+  height: min(82vh, 780px); min-height: 560px;
+  overflow: hidden;
+  background:
+    radial-gradient(1200px 700px at 70% -10%, rgba(40,90,160,0.18), transparent 60%),
+    radial-gradient(900px 600px at 10% 110%, rgba(30,120,110,0.14), transparent 55%),
+    linear-gradient(160deg, #0b1224, #060a14);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+.gim .topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 22px; gap: 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--panel); backdrop-filter: blur(6px); flex-wrap: wrap;
+}
+.gim .brand { display: flex; align-items: center; gap: 14px; }
+.gim .logo { font-size: 30px; filter: drop-shadow(0 0 8px rgba(78,168,255,.6)); }
+.gim .titles h1 { font-size: 20px; letter-spacing: 1px; }
+.gim .subtitle { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.gim .status { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.gim .legend { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); }
+.gim .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-left: 8px; background: #888; }
+.gim .meta { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); }
+.gim .updated { font-variant-numeric: tabular-nums; }
+.gim .conn { font-size: 12px; }
+.gim .conn.ok { color: var(--down); }
+.gim .conn.pending { color: #f5c542; }
+.gim .conn.warn { color: #f5a623; }
+.gim .conn.err { color: var(--up); }
+.gim .controls { display: flex; align-items: center; gap: 12px; font-size: 13px; flex-wrap: wrap; }
+.gim .controls select, .gim .controls button {
+  background: var(--ctrl-bg); color: var(--text);
+  border: 1px solid var(--border); border-radius: 6px; padding: 5px 10px; cursor: pointer; font-size: 13px;
+}
+.gim .controls button:hover, .gim .controls select:hover { background: var(--ctrl-bg-hover); }
+.gim .chk { display: flex; align-items: center; gap: 5px; color: var(--muted); }
+.gim .layout { flex: 1; display: flex; min-height: 0; }
+.gim .map { flex: 1; min-width: 0; position: relative; }
+.gim .panel {
+  width: 320px; flex-shrink: 0; border-left: 1px solid var(--border);
+  background: var(--panel); backdrop-filter: blur(8px);
+  display: flex; flex-direction: column; min-height: 0;
+}
+.gim .panel-head { padding: 12px 16px 10px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); gap: 8px; flex-wrap: wrap; }
+.gim .panel-head h2 { font-size: 15px; }
+.gim .head-actions { display: flex; align-items: center; gap: 8px; }
+.gim .mini { background: transparent; border: 1px solid var(--border); color: var(--muted); font-size: 11px; padding: 3px 8px; border-radius: 5px; cursor: pointer; }
+.gim .mini:hover { color: var(--text); border-color: var(--accent); }
+.gim .sort { display: flex; gap: 6px; }
+.gim .sort button { background: transparent; border: 1px solid var(--border); color: var(--muted); font-size: 11px; padding: 3px 8px; border-radius: 5px; cursor: pointer; }
+.gim .sort button.active { color: var(--text); border-color: var(--accent); background: rgba(78,168,255,.15); }
+.gim .list { flex: 1; overflow-y: auto; padding: 8px 10px; }
+.gim .item {
+  display: grid; grid-template-columns: 1fr auto; gap: 2px 8px;
+  padding: 9px 10px; border-radius: 8px; margin-bottom: 6px;
+  background: rgba(255,255,255,0.03); border: 1px solid transparent;
+  cursor: pointer; transition: background .15s, border-color .15s;
+}
+.gim .item:hover { background: rgba(78,168,255,.12); border-color: var(--border); }
+.gim .item.active { background: rgba(78,168,255,.18); border-color: var(--accent); }
+.gim .item .name { font-size: 13px; font-weight: 600; }
+.gim .item .region { font-size: 11px; color: var(--muted); }
+.gim .item .price { font-size: 14px; text-align: right; font-variant-numeric: tabular-nums; }
+.gim .item .pct { font-size: 12px; text-align: right; font-variant-numeric: tabular-nums; }
+.gim .upc { color: var(--up); }
+.gim .downc { color: var(--down); }
+.gim .group-head {
+  font-size: 12px; font-weight: 700; color: var(--accent);
+  padding: 10px 10px 4px; letter-spacing: .5px;
+  border-bottom: 1px dashed var(--border); margin-top: 4px;
+  cursor: pointer; user-select: none; display: flex; align-items: center; gap: 6px;
+}
+.gim .group-head:hover { color: var(--text); }
+.gim .group-head .tw { display: inline-block; width: 12px; font-size: 10px; transition: transform .15s; }
+.gim .group-head.collapsed { opacity: .68; }
+.gim .group-head.collapsed .tw { transform: rotate(-90deg); }
+.gim .group-count {
+  display: inline-block; min-width: 18px; text-align: center;
+  background: rgba(78,168,255,.18); color: var(--text);
+  border-radius: 9px; padding: 0 6px; font-size: 11px; margin-left: 4px;
+}
+.gim .empty { padding: 30px 10px; color: var(--muted); text-align: center; font-size: 13px; }
+.gim .panel-foot { padding: 10px 14px; font-size: 11px; color: var(--muted); border-top: 1px solid var(--border); line-height: 1.5; }
+.gim .list::-webkit-scrollbar { width: 8px; }
+.gim .list::-webkit-scrollbar-thumb { background: rgba(120,170,220,.25); border-radius: 4px; }
+@media (max-width: 860px) {
+  .gim .layout { flex-direction: column; }
+  .gim .panel { width: 100%; height: 42%; border-left: none; border-top: 1px solid var(--border); }
+  .gim .map { height: 58%; }
+}
