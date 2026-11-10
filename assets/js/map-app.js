@@ -120,7 +120,7 @@ function colorFor(pct) {
 async function initMap() {
   let geo = window.WORLD_GEO;
   if (!geo) {
-    const res = await fetch('data/world.json');
+    const res = await fetch('/data/world.json');
     geo = await res.json();
   }
   echarts.registerMap('world', geo);
@@ -287,7 +287,7 @@ function itemHTML(d) {
 // 行情由 GitHub Actions 定时抓取新浪数据并生成 data/quotes.json（同源静态文件，
 // 无需本地服务端代理）。浏览器每 20s 重新读取该快照即可刷新。
 async function loadQuotes() {
-  const res = await fetch('data/quotes.json?t=' + Date.now(), { cache: 'no-store' });
+  const res = await fetch('/data/quotes.json?t=' + Date.now(), { cache: 'no-store' });
   if (!res.ok) throw new Error('HTTP ' + res.status);
   const j = await res.json();
   if (!j.quotes || !Object.keys(j.quotes).length) throw new Error('无数据（请确认 data/quotes.json 已生成）');
