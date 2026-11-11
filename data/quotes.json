@@ -1,6 +1,6 @@
 {
   "source": "sina",
-  "updated_at": "2026-11-11T04:38:27Z",
+  "updated_at": "2026-11-11T04:39:36Z",
   "count": 41,
   "quotes": {
     "b_SPX": {
@@ -129,14 +129,14 @@
       "changePct": -0.83
     },
     "b_NKY": {
-      "price": 61256.65,
-      "change": 797.29,
-      "changePct": 1.32
+      "price": 61253.38,
+      "change": 794.02,
+      "changePct": 1.31
     },
     "b_KOSPI": {
-      "price": 5363.58,
-      "change": 124.45,
-      "changePct": 2.38
+      "price": 5367.6,
+      "change": 128.47,
+      "changePct": 2.45
     },
     "b_TWSE": {
       "price": 25580.32,
@@ -149,13 +149,13 @@
       "changePct": 0.27
     },
     "b_SENSEX": {
-      "price": 82396.04,
-      "change": 1289.39,
-      "changePct": 1.59
+      "price": 82375.0391,
+      "change": 1268.39,
+      "changePct": 1.56
     },
     "b_JCI": {
-      "price": 5123.409,
-      "change": -2.32,
+      "price": 5123.284,
+      "change": -2.44,
       "changePct": -0.05
     },
     "b_FBMKLCI": {
@@ -199,9 +199,9 @@
       "changePct": 0.2
     },
     "b_AS51": {
-      "price": 9142.1,
-      "change": 13.1,
-      "changePct": 0.14
+      "price": 9143.2,
+      "change": 14.2,
+      "changePct": 0.16
     },
     "b_NZSE50FG": {
       "price": 13132.56,
