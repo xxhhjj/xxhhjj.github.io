@@ -1,0 +1,68 @@
+name: 部署与指数行情自动更新
+
+# 单一工作流：push / 定时(每4h) / 手动 触发，在同一 run 内完成：
+#   1) 抓取全球指数行情 -> data/quotes.json 并提交（如有变化）
+#   2) 上传整个仓库为 Pages 产物并部署
+# 这样行情更新后由“同一 run 的后续 job”直接部署，不依赖“push 事件再次触发工作流”，
+# 规避 GITHUB_TOKEN 推送不触发 on:push 的经典坑，保证环球指数地图真正能自动更新。
+on:
+  push:
+    branches: [main, master]   # 同时兼容 main / master 默认分支
+  schedule:
+    - cron: "0 */4 * * *"   # UTC，每 4 小时一次
+  workflow_dispatch:        # 允许手动在 Actions 页面触发
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# 同一时间只跑一个部署
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: 抓取全球指数行情
+        run: python scripts/fetch_quotes.py
+
+      - name: 提交行情（如有变化）
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.com"
+          git add data/quotes.json
+          if git diff --cached --quiet; then
+            echo "行情无变化，跳过提交。"
+          else
+            git commit -m "chore: 自动更新全球指数行情"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+
+      - name: 配置 Pages
+        uses: actions/configure-pages@v5
+
+      - name: 上传站点产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .        # 仓库根目录即站点根
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 部署
+        id: deployment
+        uses: actions/deploy-pages@v4
