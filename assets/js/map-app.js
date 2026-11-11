@@ -99,7 +99,6 @@ let lastQuotes = null;
 let lastData = null;
 let focusedIdx = null;        // 当前在地图中聚焦的榜单项下标
 let collapsed = new Set();
-let timer = null;
 
 const chart = echarts.init(document.getElementById('map'), null, { renderer: 'canvas' });
 
@@ -365,7 +364,6 @@ function applyTheme(key) {
 
 // ---------- 控件 ----------
 function setupControls() {
-  document.getElementById('interval').addEventListener('change', (e) => restartTimer(parseInt(e.target.value, 10)));
   document.getElementById('region').addEventListener('change', (e) => { regionFilter = e.target.value; resetMapView(); refresh(); });
   document.getElementById('theme').addEventListener('change', (e) => applyTheme(e.target.value));
   document.getElementById('showLabels').addEventListener('change', (e) => { showLabels = e.target.checked; refresh(); });
@@ -407,11 +405,6 @@ function setupControls() {
   window.addEventListener('resize', () => chart.resize());
 }
 
-function restartTimer(ms) {
-  if (timer) clearInterval(timer);
-  timer = setInterval(refresh, ms);
-}
-
 // 站点主题切换时，让地图背景同步（白色主题 -> 极简浅色）
 window.addEventListener('site-theme-change', function () {
   var light = document.documentElement.getAttribute('data-theme') === 'light';
@@ -441,5 +434,4 @@ window.addEventListener('site-theme-change', function () {
   if (themeSel) themeSel.value = initialTheme;
   applyTheme(initialTheme);
   await refresh();
-  restartTimer(20000);
 })();
