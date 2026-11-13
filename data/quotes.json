@@ -1,22 +1,22 @@
 {
   "source": "sina",
-  "updated_at": "2026-11-13T15:54:01Z",
+  "updated_at": "2026-11-13T21:47:33Z",
   "count": 41,
   "quotes": {
     "b_SPX": {
-      "price": 7528.13,
-      "change": -64.27,
-      "changePct": -0.85
+      "price": 7561.67,
+      "change": -30.73,
+      "changePct": -0.4
     },
     "gb_$dji": {
-      "price": 52247.6914,
-      "change": -49.4,
-      "changePct": -0.09
+      "price": 52347.5508,
+      "change": 50.46,
+      "changePct": 0.1
     },
     "gb_$ixic": {
-      "price": 24991.7248,
-      "change": -374.3681,
-      "changePct": -1.48
+      "price": 25136.2726,
+      "change": -229.8203,
+      "changePct": -0.91
     },
     "b_SPTSX": {
       "price": 29761.28,
@@ -29,9 +29,9 @@
       "changePct": 0.58
     },
     "b_IBOV": {
-      "price": 172240.33,
-      "change": 916.02,
-      "changePct": 0.53
+      "price": 172642.41,
+      "change": 1318.1,
+      "changePct": 0.77
     },
     "b_MERVAL": {
       "price": 1791046.0,
@@ -39,19 +39,19 @@
       "changePct": 1.31
     },
     "b_UKX": {
-      "price": 10896.78,
-      "change": 33.69,
-      "changePct": 0.31
+      "price": 10902.5596,
+      "change": 39.47,
+      "changePct": 0.36
     },
     "b_DAX": {
-      "price": 26761.1699,
-      "change": -10.71,
-      "changePct": -0.04
+      "price": 26756.7207,
+      "change": -15.16,
+      "changePct": -0.06
     },
     "b_CAC": {
-      "price": 8370.6797,
-      "change": 9.32,
-      "changePct": 0.11
+      "price": 8373.5195,
+      "change": 12.16,
+      "changePct": 0.15
     },
     "b_SMI": {
       "price": 11929.8,
@@ -59,19 +59,19 @@
       "changePct": 0.45
     },
     "b_AEX": {
-      "price": 1141.19,
-      "change": 1.06,
-      "changePct": 0.09
+      "price": 1140.97,
+      "change": 0.84,
+      "changePct": 0.07
     },
     "b_FTSEMIB": {
-      "price": 51806.97,
-      "change": -1.7,
-      "changePct": -0.0
+      "price": 51815.02,
+      "change": 6.35,
+      "changePct": 0.01
     },
     "b_IBEX": {
-      "price": 20012.51,
-      "change": 47.0,
-      "changePct": 0.24
+      "price": 20020.09,
+      "change": 54.58,
+      "changePct": 0.27
     },
     "b_OMX": {
       "price": 2644.62,
@@ -94,14 +94,14 @@
       "changePct": 0.39
     },
     "b_INDEXCF": {
-      "price": 2511.45,
-      "change": 5.5,
-      "changePct": 0.22
+      "price": 2510.99,
+      "change": 5.04,
+      "changePct": 0.2
     },
     "b_SX5E": {
-      "price": 6386.13,
-      "change": -12.86,
-      "changePct": -0.2
+      "price": 6388.02,
+      "change": -10.96,
+      "changePct": -0.17
     },
     "b_JALSH": {
       "price": 106700.1,
