@@ -1,22 +1,22 @@
 {
   "source": "sina",
-  "updated_at": "2026-11-18T05:49:27Z",
+  "updated_at": "2026-11-18T16:55:34Z",
   "count": 41,
   "quotes": {
     "b_SPX": {
-      "price": 7340.53,
-      "change": -76.06,
-      "changePct": -1.03
+      "price": 7290.01,
+      "change": -50.52,
+      "changePct": -0.69
     },
     "gb_$dji": {
-      "price": 50759.4219,
-      "change": -848.75,
-      "changePct": -1.64
+      "price": 50121.6602,
+      "change": -637.76,
+      "changePct": -1.26
     },
     "gb_$ixic": {
-      "price": 24328.383,
-      "change": -181.3746,
-      "changePct": -0.74
+      "price": 24227.1774,
+      "change": -101.2056,
+      "changePct": -0.42
     },
     "b_SPTSX": {
       "price": 29761.28,
@@ -29,9 +29,9 @@
       "changePct": 0.58
     },
     "b_IBOV": {
-      "price": 169815.73,
-      "change": 520.32,
-      "changePct": 0.31
+      "price": 167631.83,
+      "change": -2184.81,
+      "changePct": -1.29
     },
     "b_MERVAL": {
       "price": 1791046.0,
@@ -39,19 +39,19 @@
       "changePct": 1.31
     },
     "b_UKX": {
-      "price": 10697.2695,
-      "change": -184.28,
-      "changePct": -1.69
+      "price": 10577.3701,
+      "change": -112.5,
+      "changePct": -1.05
     },
     "b_DAX": {
-      "price": 26077.8105,
-      "change": -520.83,
-      "changePct": -1.96
+      "price": 25757.5098,
+      "change": -287.86,
+      "changePct": -1.11
     },
     "b_CAC": {
-      "price": 8226.5898,
-      "change": -125.41,
-      "changePct": -1.5
+      "price": 8146.52,
+      "change": -70.26,
+      "changePct": -0.86
     },
     "b_SMI": {
       "price": 11929.8,
@@ -59,19 +59,19 @@
       "changePct": 0.45
     },
     "b_AEX": {
-      "price": 1111.85,
-      "change": -22.29,
-      "changePct": -1.97
+      "price": 1098.66,
+      "change": -11.24,
+      "changePct": -1.01
     },
     "b_FTSEMIB": {
-      "price": 50811.01,
-      "change": -709.54,
-      "changePct": -1.38
+      "price": 50150.63,
+      "change": -695.18,
+      "changePct": -1.37
     },
     "b_IBEX": {
-      "price": 19625.3,
-      "change": -321.3,
-      "changePct": -1.61
+      "price": 19378.91,
+      "change": -246.39,
+      "changePct": -1.26
     },
     "b_OMX": {
       "price": 2644.62,
@@ -94,14 +94,14 @@
       "changePct": 0.39
     },
     "b_INDEXCF": {
-      "price": 2503.01,
-      "change": 27.31,
-      "changePct": 1.1
+      "price": 2470.09,
+      "change": -25.77,
+      "changePct": -1.03
     },
     "b_SX5E": {
-      "price": 6220.9702,
-      "change": -127.38,
-      "changePct": -2.01
+      "price": 6175.96,
+      "change": -36.15,
+      "changePct": -0.58
     },
     "b_JALSH": {
       "price": 106700.1,
@@ -109,34 +109,34 @@
       "changePct": 0.85
     },
     "b_CASE": {
-      "price": 51681.6,
-      "change": -518.2,
-      "changePct": -0.99
+      "price": 51544.8,
+      "change": -136.8,
+      "changePct": -0.26
     },
     "s_sh000001": {
-      "price": 3586.9447,
-      "change": 2.3653,
-      "changePct": 0.07
+      "price": 3587.8317,
+      "change": 3.2523,
+      "changePct": 0.09
     },
     "s_sz399001": {
-      "price": 10666.38,
-      "change": 27.856,
-      "changePct": 0.26
+      "price": 10659.41,
+      "change": 20.887,
+      "changePct": 0.2
     },
     "int_hangseng": {
-      "price": 23255.32,
-      "change": -252.85,
-      "changePct": -1.08
+      "price": 23294.75,
+      "change": -213.42,
+      "changePct": -0.91
     },
     "b_NKY": {
-      "price": 59082.24,
-      "change": 222.03,
-      "changePct": 0.38
+      "price": 59024.06,
+      "change": 163.63,
+      "changePct": 0.28
     },
     "b_KOSPI": {
-      "price": 5057.55,
-      "change": 89.07,
-      "changePct": 1.79
+      "price": 5067.44,
+      "change": 98.96,
+      "changePct": 1.99
     },
     "b_TWSE": {
       "price": 25580.32,
@@ -149,14 +149,14 @@
       "changePct": 0.27
     },
     "b_SENSEX": {
-      "price": 82056.29,
-      "change": -475.9,
-      "changePct": -0.58
+      "price": 82031.8125,
+      "change": -72.99,
+      "changePct": -0.09
     },
     "b_JCI": {
-      "price": 5325.897,
-      "change": 21.14,
-      "changePct": 0.4
+      "price": 5247.8789,
+      "change": -73.1,
+      "changePct": -1.37
     },
     "b_FBMKLCI": {
       "price": 1609.03,
@@ -174,9 +174,9 @@
       "changePct": -0.68
     },
     "b_KSE100": {
-      "price": 176561.8762,
-      "change": -955.86,
-      "changePct": -0.54
+      "price": 176294.3313,
+      "change": -1223.41,
+      "changePct": -0.69
     },
     "b_VNINDEX": {
       "price": 1670.79,
@@ -184,9 +184,9 @@
       "changePct": 0.61
     },
     "b_XU100": {
-      "price": 11661.0,
-      "change": -180.81,
-      "changePct": -1.53
+      "price": 11477.41,
+      "change": -183.59,
+      "changePct": -1.57
     },
     "b_SASEIDX": {
       "price": 11229.54,
