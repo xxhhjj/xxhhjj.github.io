@@ -1,6 +1,6 @@
 {
   "source": "sina",
-  "updated_at": "2026-11-21T01:04:07Z",
+  "updated_at": "2026-11-21T12:04:21Z",
   "count": 41,
   "quotes": {
     "b_SPX": {
@@ -44,14 +44,14 @@
       "changePct": -1.02
     },
     "b_DAX": {
-      "price": 24839.0605,
-      "change": -624.75,
-      "changePct": -2.45
+      "price": 24802.7793,
+      "change": -661.03,
+      "changePct": -2.6
     },
     "b_CAC": {
-      "price": 7955.54,
-      "change": -125.2,
-      "changePct": -1.55
+      "price": 7927.75,
+      "change": -152.99,
+      "changePct": -1.89
     },
     "b_SMI": {
       "price": 11929.8,
@@ -155,8 +155,8 @@
     },
     "b_JCI": {
       "price": 5146.3262,
-      "change": -101.55,
-      "changePct": -1.94
+      "change": -47.81,
+      "changePct": -0.92
     },
     "b_FBMKLCI": {
       "price": 1609.03,
