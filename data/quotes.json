@@ -1,22 +1,22 @@
 {
   "source": "sina",
-  "updated_at": "2026-11-20T16:41:14Z",
+  "updated_at": "2026-11-21T01:04:07Z",
   "count": 41,
   "quotes": {
     "b_SPX": {
-      "price": 7052.46,
-      "change": -123.37,
-      "changePct": -1.72
+      "price": 6910.39,
+      "change": -265.44,
+      "changePct": -3.7
     },
     "gb_$dji": {
-      "price": 48930.9219,
-      "change": -166.14,
-      "changePct": -0.34
+      "price": 48147.3281,
+      "change": -949.73,
+      "changePct": -1.93
     },
     "gb_$ixic": {
-      "price": 23151.4585,
-      "change": -727.7408,
-      "changePct": -3.05
+      "price": 22617.733,
+      "change": -1261.4663,
+      "changePct": -5.28
     },
     "b_SPTSX": {
       "price": 29761.28,
@@ -39,9 +39,9 @@
       "changePct": 1.31
     },
     "b_UKX": {
-      "price": 10374.2305,
-      "change": -78.45,
-      "changePct": -0.75
+      "price": 10346.3398,
+      "change": -106.34,
+      "changePct": -1.02
     },
     "b_DAX": {
       "price": 24839.0605,
@@ -99,9 +99,9 @@
       "changePct": -2.74
     },
     "b_SX5E": {
-      "price": 5966.3501,
-      "change": -147.51,
-      "changePct": -2.41
+      "price": 5941.9502,
+      "change": -171.91,
+      "changePct": -2.81
     },
     "b_JALSH": {
       "price": 106700.1,
