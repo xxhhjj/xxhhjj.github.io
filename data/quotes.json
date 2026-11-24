@@ -1,22 +1,22 @@
 {
   "source": "sina",
-  "updated_at": "2026-11-23T19:48:23Z",
+  "updated_at": "2026-11-24T04:35:03Z",
   "count": 41,
   "quotes": {
     "b_SPX": {
-      "price": 7232.01,
-      "change": 321.62,
-      "changePct": 4.65
+      "price": 7237.17,
+      "change": 326.78,
+      "changePct": 4.73
     },
     "gb_$dji": {
-      "price": 49600.4414,
-      "change": 1453.11,
-      "changePct": 3.02
+      "price": 49595.3086,
+      "change": 1447.98,
+      "changePct": 3.01
     },
     "gb_$ixic": {
-      "price": 24037.6151,
-      "change": 1419.8821,
-      "changePct": 6.28
+      "price": 24089.5577,
+      "change": 1471.8247,
+      "changePct": 6.51
     },
     "b_SPTSX": {
       "price": 29761.28,
@@ -29,9 +29,9 @@
       "changePct": 0.58
     },
     "b_IBOV": {
-      "price": 164809.19,
-      "change": -1567.24,
-      "changePct": -0.94
+      "price": 164843.99,
+      "change": -1532.44,
+      "changePct": -0.92
     },
     "b_MERVAL": {
       "price": 1791046.0,
@@ -114,29 +114,29 @@
       "changePct": 1.44
     },
     "s_sh000001": {
-      "price": 3538.948,
-      "change": 5.1551,
-      "changePct": 0.15
+      "price": 3555.4915,
+      "change": 16.5435,
+      "changePct": 0.47
     },
     "s_sz399001": {
-      "price": 10454.37,
-      "change": 197.98,
-      "changePct": 1.93
+      "price": 10550.87,
+      "change": 96.501,
+      "changePct": 0.92
     },
     "int_hangseng": {
-      "price": 22383.74,
-      "change": -27.06,
-      "changePct": -0.12
+      "price": 22295.939,
+      "change": -87.8,
+      "changePct": -0.39
     },
     "b_NKY": {
-      "price": 56436.65,
-      "change": -3007.56,
-      "changePct": -5.06
+      "price": 58629.26,
+      "change": 2192.61,
+      "changePct": 3.89
     },
     "b_KOSPI": {
-      "price": 4708.54,
-      "change": -161.42,
-      "changePct": -3.31
+      "price": 5045.65,
+      "change": 337.11,
+      "changePct": 7.16
     },
     "b_TWSE": {
       "price": 25580.32,
@@ -154,9 +154,9 @@
       "changePct": -1.77
     },
     "b_JCI": {
-      "price": 5215.8501,
-      "change": 69.52,
-      "changePct": 1.35
+      "price": 5237.518,
+      "change": 21.67,
+      "changePct": 0.42
     },
     "b_FBMKLCI": {
       "price": 1609.03,
@@ -199,9 +199,9 @@
       "changePct": 0.2
     },
     "b_AS51": {
-      "price": 8570.6,
-      "change": -22.0,
-      "changePct": -0.26
+      "price": 8703.5,
+      "change": 132.9,
+      "changePct": 1.55
     },
     "b_NZSE50FG": {
       "price": 13132.56,
