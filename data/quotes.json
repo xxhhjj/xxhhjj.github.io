@@ -1,6 +1,6 @@
 {
   "source": "sina",
-  "updated_at": "2026-11-27T23:53:20Z",
+  "updated_at": "2026-11-28T06:10:58Z",
   "count": 41,
   "quotes": {
     "b_SPX": {
@@ -155,8 +155,8 @@
     },
     "b_JCI": {
       "price": 5338.457,
-      "change": 140.85,
-      "changePct": 2.71
+      "change": 96.29,
+      "changePct": 1.84
     },
     "b_FBMKLCI": {
       "price": 1609.03,
